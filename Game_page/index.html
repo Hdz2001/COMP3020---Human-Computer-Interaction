@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+
+<head> 
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0" >
+    <!--width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).--> 
+    <!--initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser..-->
+
+    <title>Game Page</title>
+    <link rel = "icon" href = "images/seal.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel = "stylesheet" href = "style.css">
+
+    
+</head>
+
+<body>
+    <div class = "card">
+        <!-- INFOS -->
+        <div class = "info">
+            <div class = "logo">
+                <!-- GO BACK TO MAIN PAGE -->
+                <a href="../Main_page/index.html"><img src = "images/seal.png"></a>
+                <p> Seal Games</p>
+            </div>
+            
+            <div></div>
+
+            <div class = "user">
+                <div class = "gameSearch">
+                    
+                    <div class = "gameSearchResult">
+                        <input type = "text" id = "input-box" placeholder="Enter the game title." spellcheck = "false">
+
+                        <div class="result-box">
+                            <!-- use searchBox script-->
+                        </div>
+                    </div>
+
+                    <button><img class = "white searchIcon" src = "images/magnifier.png"></button>
+                    
+                </div>
+                
+                <div class = "gameCart">
+                    <button><img class = "white cartInfo" src = "images/shopping-cart.png"></button>
+
+                    <div class = "cartContent">
+                        <!-- use showCart and addToCart script-->
+                    </div>
+                </div>
+                    
+                <button><img class = "userIMG" src = "images/Mr.Mime.jpg"></button>             
+            </div>
+        </div>
+
+        <!-- BREADCRUMBS -->
+        <div class = "genre">
+            <img class = "white" src = "images/back-button.png">
+            <!-- GO BACK TO MAIN PAGE -->
+            <p> <a style = "color: white" href="../Main_page/index.html">Explore</a>>Free To Play>MOBA>League of Legends </p>
+        </div>
+
+        <!-- GAME -->
+        <div class = "game">
+            
+            <!--1-->
+            <div class = "gameImage">
+                <p>League of Legends</p>
+
+                <div class = "gameImageSlide">
+                    <!--<img src = "images/left.png" class = "arrow"></img>-->
+                    <video class = "window" controls="controls">
+                        <source src="images/gameList/lol.mp4" type="video/mp4" />
+                    </video>
+                    <!--<img src = "images/gameList/nasus.jpg" class = "window"></img>-->
+                    <!--<img src = "images/right.png" class = "arrow"></img>-->
+                </div>
+                
+            </div>
+
+            <!--2-->
+            <div class = "gameDetails">
+                <div class = "desc">
+                    <img src = "images/gameList/nasus.jpg" class = "miniWindow"></img> 
+                    
+                    <div class = "gameInfo">
+                        <div class = "rating">
+                            <p><img class = "white" src = "images/rating.png"></img> Rating: 5/5</p>
+                            <p><img class = "white" src = "images/review.png"></img> USER REVIEW: 1707</p>
+                        </div>
+                        
+                        <div class = "otherDesc">
+                            <p><img class = "white" src = "images/info.png"></img> 
+                                <span style="font-weight: bold; font-size: 25px;">Description: </span> League of Legends is a multiplayer online battle arena (MOBA) video game developed by Riot Games. 
+                                It was first announced on October 7, 2008, and released a year later on October 27, 2009. </p>
+                            <p><img class = "white" src = "images/info.png"></img> 
+                                <span style="font-weight: bold; font-size: 25px;">All-time user: </span> 100 millions </p>
+                            <p><img class = "white" src = "images/info.png"></img> 
+                                <span style="font-weight: bold; font-size: 25px;">Real-time user: </span> 1 millions</p>
+                        </div>
+    
+                        <div class = "price"> 
+                            <p><img class = "white" src = "images/coin.png"></img> Price: FREE!</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+            <!--1-->
+
+            <div class = "gameList">
+                <div class = "gameListZ">
+                    <img src = "images/gameList/nasusSmall.png" class = "image1 gameListStuff"></img>
+                    <img src = "images/gameList/gwenSmall.jpeg" class = "image2 gameListStuff"></img>
+                    <img src = "images/gameList/dariusSmall.png" class = "image3 gameListStuff"></img>
+                    <img src = "images/gameList/teemoSmall.png" class = "image4 gameListStuff"></img>                 
+                    <img src = "images/gameList/lolSmall.png" class = "image5" ></img>
+                </div>
+                
+            </div>
+
+            <!--2-->
+
+            <div class = "cart"> 
+                <button id = "addToCart" onclick="addToCart(0)"><p>Add To Cart</p></button>
+                <button id = "wishlist">
+                    <img  class = "white" src="images/heart.png " ></img>
+                </button>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <!-- BLOGS -->
+    <div class = "blogs">
+        <p>Blogs and Posts:</p>
+
+        <div class = "blogList">
+            <!-- use addBlog script-->
+        </div>
+    </div>
+
+    <div class = "review">
+        <div class = "reviewDropBox">
+            <!--1-->
+            <div>
+                <p>Reviews:</p>
+            </div>
+
+            <!--2-->
+            <div class = "reviewDropBoxContent">
+                <div class = "reviewFilter">
+                    <button class="dropbtn">Most recent</button>
+
+                </div>
+
+                <div class = "reviewFilterContent">
+                    <button class = "mostrecent"><p>Most recent</p></button>
+                    <button class = "upvote"><p>Most👍🏻</p></button>
+                    <button class = "downvote"><p>Most👎🏻</p></button>
+                    <button class = "star1"><p>1⭐</p> </button>
+                    <button class = "star2"><p>2⭐</p> </button>
+                    <button class = "star3"><p>3⭐</p> </button>
+                    <button class = "star4"><p>4⭐</p> </button>
+                    <button class = "star5"><p>5⭐</p> </button>
+                </div>
+            </div>
+        </div>
+
+        <div class = "reviewBoxes">
+            <!-- use addReview script-->
+        </div>
+        
+    </div>
+    
+    <script src = "../Context/cart.js"></script>
+    <script src = "changeImage.js"></script>
+    <script src = "showCart.js"></script>
+    <script src = "addToCart.js"></script>
+    <script src = "addBlog.js"></script>
+    <script src = "addReviews.js"></script>
+    <script src = "searchBox.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,499 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather';
+    box-sizing: border-box;
+}
+
+:root{
+    --img: 50px;
+    --infoPadding: 15px;
+    --contentPadding: 20px;
+    --windowSize: 90%;
+}
+
+
+body{
+    background: linear-gradient(400deg, black, #343434,black);
+    font-size: 20px;
+}
+
+.card{
+    width: 100%;
+    padding: 25px;
+    color: white;
+}
+
+/*CHANGE IMAGE TO WHITE*/
+.white{
+    filter: brightness(0) invert(1);   
+}
+
+/*INFO*/
+.info{  
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 0fr 1fr;
+    padding-bottom: var(--contentPadding);
+}
+
+img{
+    width: var(--img);
+}
+
+
+.logo{
+    display: flex;
+}
+
+.logo p{
+    margin-top: var(--infoPadding);
+    margin-left: var(--infoPadding);
+}
+
+.user{
+    text-align: right;
+    display: flex;
+    justify-content: right;
+}
+
+.user button{
+    margin-left: 25px;
+    cursor: pointer;
+    background: linear-gradient(400deg, grey,black);
+}
+
+.user button:hover {
+    background: linear-gradient(100deg, black,grey);
+}
+
+.user input{
+    height: 60px;
+    font-size: 20px;
+    background: linear-gradient(400deg, black, grey);   
+    border-radius: 10px;
+    padding: 10px;
+    vertical-align: middle;
+    visibility: hidden;
+}
+
+.gameSearch{
+    display: inline-flex;
+}
+
+.gameSearchResult{
+    position: relative;
+}
+
+.result-box {
+    max-height: 150px;
+    overflow-y: auto;
+    background: linear-gradient(400deg, black, grey);
+    padding: 10px;
+    text-align: left;
+    line-height: 1.5;
+    border-radius: 15px;
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+.result-box:hover{
+    cursor: pointer;
+}
+
+#input-box, ::placeholder{
+    color: white;
+}
+
+/*CART CONTENT*/
+.gameCart{
+    position: relative;
+}
+
+.cartContent{
+    display: none;
+    background: linear-gradient(300deg, grey,black);
+    right: 0px;
+    margin: 0;
+    text-align: left;
+    border: 2px solid;
+    max-height: 150px;
+    overflow-y: auto;
+    white-space: nowrap;
+    position: absolute;
+}
+
+.itemPrice, .cartGames, .total{
+    padding: 10px;
+}
+
+.total{
+    text-align: center;
+}
+
+.underline{
+    border-bottom: 2px solid;
+}
+
+.total button{
+    color: white;
+    font-size: 23px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*GENRE*/
+.genre{
+    display: flex;
+    padding-bottom: var(--contentPadding);
+}
+
+.genre p{
+    margin-top: var(--infoPadding);
+    margin-left: var(--infoPadding);
+}
+
+/*GAME*/
+.game{
+    display: grid;
+    align-items: start;
+    grid-template-columns: 70% auto;
+    padding-bottom: var(--contentPadding);
+}
+
+.gameImage{
+    text-align: center;
+    font-size: 50px;
+    height: 760px;
+}
+
+.gameImage p{
+    text-align: left;
+    padding-left: 5%;
+    padding-bottom: var(--contentPadding);
+}
+
+.gameImageSlide{
+    display: contents;
+}
+
+.window{
+    width: var(--windowSize);
+    height: 90%;
+    border-radius: 10px;
+}
+
+/*TRYING TO CENTER THE ARROW, BUT NOT WORKING*/
+/*TRYING DISPLAY: CONTENTS, BUT MIGHT NEED CHANGE*/
+.arrow{
+    margin-bottom: calc(75%/1440*823/2);
+}
+
+/*GAME DETAILS*/
+.gameDetails{
+    padding-top: 85px;
+    text-align: center;
+    max-height: 760px;
+    overflow-y: auto;
+    line-height: 1.5;
+}
+
+.miniWindow{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gameInfo{
+    padding-top: 20px;
+    max-height: 360px;
+    overflow-y: auto;
+}
+
+.rating{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+.rating img{
+    width: calc(var(--img)*0.5);
+}
+
+.otherDesc{
+    text-align: left;
+}
+
+.otherDesc img{
+    width: calc(var(--img)*0.5);
+    
+}
+
+.price{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.price img{
+    width: calc(var(--img)*0.5);
+}
+
+/*GAME LIST - IMAGES AND VIDEO*/
+.gameList{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5%;
+    padding-right: 5%;  
+}
+
+.gameList img{
+    width: 225px;
+    border-radius: 10px;
+}
+
+.gameListZ{
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+
+.gameListZ img:hover{
+    cursor: pointer;
+}
+
+
+.gameListStuff{
+    margin-right: 10px;
+}
+
+.image1 {
+    border: 3px solid white;
+}
+
+/*ADD TO CART*/
+.cart{ 
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    text-align: center;
+}
+
+.cart button{
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 15px;   
+    box-shadow: 5px 5px 5px  white;
+    background: linear-gradient(200deg, grey,black);
+    margin-right: 20px;
+}
+
+.cart button p{
+    padding: 15px;
+    
+}
+
+.cart button:hover{
+    background: linear-gradient(200deg, black,grey);
+}
+
+#addToCart:active{
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+
+#wishlist img{
+    padding: 10px;
+    width: 55px;
+}
+
+#wishlist:active{
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+/*BLOGS*/
+.blogs{
+    color: white;
+    font-size: 40px;
+    padding-left: 90px;
+    padding-right: 25px;
+}
+
+.blogs p{
+    margin-bottom: 20px;
+}
+
+.blogList{
+    display: inline-flex;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.text-container {
+    color: rgb(255, 255, 255);
+    left: 18rem;
+    top: 2rem;
+    background-color: rgb(41, 41, 41, 0.8);
+    padding: 0 1rem;
+}
+
+.blogList img{
+    width: 225px;
+    height: 130px;
+    border-radius: 10px;
+    margin-right: 10px;
+    justify-content: space-between;
+}
+
+.blogList img:hover{
+    cursor: pointer;
+}
+
+.blogListContent{
+    font-size: 20px;
+}
+
+.blogImage{
+    position: relative;
+}
+
+.blogImage p{
+    position: absolute;
+    padding: 10px;
+    font-weight: bold;
+    display: none;
+    animation: animate 5s linear infinite;
+    white-space: nowrap;
+}
+
+/* ANIMATE NOT WORKING AS IT SHOULD FOR LONGER TITLE, NEED TO LOOK INTO FURTHER */
+/* WANT TEXT TO DISAPPEAR AT ONE CORNER AND APPEAR AT OTHER CORNER */
+@keyframes animate {
+    0%   
+    { 
+        transform: translateX(0%); 
+    }
+    100% 
+    { 
+        transform: translateX(140px); 
+    }
+}
+
+
+/*REVIEWS*/
+.review{
+    color: white;
+    font-size: 40px;
+    margin: 50px 25px 20px 90px;
+}
+
+.reviewDropBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.reviewDropBoxContent{
+    position: relative;
+    font-size: 20px;
+    text-align: right;
+}
+
+.reviewDropBoxContent button{
+    color: white;
+    font-size: 20px;
+    background: linear-gradient(200deg, black, #343434,black);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.reviewFilter{
+    right: 0;
+    line-height: 1.5;
+    text-align: right;
+}
+
+.reviewFilterContent{
+    padding-top: 10px;
+    display: none;
+}
+
+
+.reviewBoxes {
+    padding-top: 10px;
+}
+
+.reviewText {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: solid;
+    font-size: 20px;
+    border-radius: 15px;
+    background: linear-gradient(400deg, black, #343434,black);
+}
+
+.userReview{
+    padding: 20px;
+    border-right: solid;
+}
+
+.reviewText img{
+    width: 75px;
+    height: 75px;
+}
+
+.userReview1{
+    display: flex;
+}
+
+.userReviewInfo{
+    display: block;
+    padding-left: 20px;
+}
+
+#userName{
+    font-size: 30px;
+}
+
+#igPlaytime{
+    font-size: 25px;
+    padding-top:20px;
+}
+
+#postedTime{
+    font-size: 30px;
+    padding-top: 60px;
+}
+
+.reviewContent{
+    position: relative;
+    margin: 20px;
+    text-align: center;
+}
+
+.reviewContent img{
+    width: 50%;
+    height: 35%;
+}
+
+.voting{
+    position: absolute;
+    font-size: 30px;
+    display: inline-flex;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+}
+
+.voting img{
+    width: 40px;
+    margin-right: 20px;
+}
+
+.voting p{
+    margin-right: 50px;
+}

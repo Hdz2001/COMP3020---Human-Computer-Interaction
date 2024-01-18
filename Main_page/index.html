@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="Images/seal.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Seal Games</title>
+</head>
+<body>
+    <div class="header">
+        <div class="Logo">
+            <img src="Images/seal.png" height="50" width="50" >
+        </div>
+        <div class="logoname">
+            <p>Seal Games</p>
+        </div>
+        <div class="profile">
+            <img src="Images/Mr.Mime.jpg" height="60" width="60" >
+        </div>
+
+    </div>
+
+    <div class="breadcrumbs">
+        <p class="breadcrumbs__item">
+            <a href="../Main_page/index.html" class="breadcrumbs__link"> Explore</a>
+        </p>
+
+    </div>
+
+    
+
+    <div class = "user">
+        <input type = "text" id = "input-box" placeholder="Enter the game title." spellcheck = "false">
+        <button id="searchbutton"><img class = "white searchIcon" src = "Images/magnifier.png" height="50" width="50"></button>
+        
+        
+        <button id="cartbutton"><img class = "white cartInfo" src = "Images/shopping-cart.png" height="50"width = "50"></button>
+
+        <div class = "cartContent">
+            <!-- use showCart script-->
+        </div>
+
+        <div class="result-box">
+            <!-- use searchBox script-->
+        </div>
+    </div>
+    
+    <div class="slider">
+        <div id="items"></div>
+
+        
+
+        <button id="next">></button>
+        <button id = "prev"><</button>
+    </div>
+
+    <button id="next6" onclick="doSomethingNext6()">Next six games ></button>
+    <button id="previous6" onclick="doSomethingPrev6()">< Previous Six Games</button>
+    <button id="allgames">see all games for Filter</button>
+
+    <div class="multiselect">
+        <div class="selectBox" onclick="showCheckBoxes()">
+        <select>
+            <option id="optionList">Filter</option>
+        </select>
+        <div class="overSelect"></div>
+        </div>
+        <div id="checkboxes">
+            <label for="one"><input type="checkbox" id="one">On sale</label>
+            
+            <label for="three"><input type="checkbox" id="three">Bestseller</label>
+            <hr>
+            <label for="four"><input type="checkbox" id="four">Action</label>
+            <label for="Five"><input type="checkbox" id="five">RPG</label>
+            <label for="six"><input type="checkbox" id="six">Racing</label>
+            <button onclick="doSomethingSearch()">Search</button>
+            <button onclick="doSomethingReset()">Reset</button>
+        </div>
+    </div>
+
+    <div class = "cartContent">
+        <!-- use showCart script-->
+    </div>
+    
+    <script src = "../Context/cart.js"></script>
+    <script src="app.js"></script>
+    <script src="searchBox.js"></script>
+</body>
+</html>
+
+<!--display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+
+<label for="two"><input type="checkbox" id="two">clearance</label>
+
+ margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:sans-serif;
+    font-size: 18px;
+
+position: absolute;
+    width: 300px;
+    height: 420px;
+    background-color: black;
+    border-radius: 10px;
+    padding:20px;
+    transition: 0.5s;
+    left: calc(50% - 170px);
+    top:0;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.5s;-->

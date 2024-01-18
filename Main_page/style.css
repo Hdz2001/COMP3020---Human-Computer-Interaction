@@ -1,0 +1,316 @@
+/*Jeevan's stuff*/
+body{
+   /* background-image:linear-gradient(
+        to bottom, blue,darkblue,black
+    );*/
+    background: linear-gradient(400deg, black, #343434,black);
+    min-height:100vh;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    font-family: monospace;
+}
+
+.slider{
+    position:relative;
+    width:100%;
+    height: 470px;
+    overflow:hidden;
+}
+
+
+.item{
+    position: absolute;
+    width: 300px;
+    height: 420px;
+    background-color: black;
+    border-radius: 10px;
+    padding:20px;
+    transition: 0.5s;
+    left: calc(50% - 170px);
+    top:0;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.5s;
+  
+}
+
+#next, #prev{
+    position:absolute;
+    top: 40%;
+    color:white;
+    background-color:transparent;
+    border:none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left:50px ;
+}
+
+
+#next{
+    left:unset;
+    right:50px;
+
+}
+
+/*Kevin's stuff*/
+
+/*CHANGE IMAGE TO WHITE*/
+.white{
+    filter: brightness(0) invert(1);   
+}
+
+.user{
+    position: absolute;
+    text-align: right;
+    top:20px;
+    right:120px;
+}
+
+.user button{
+    margin-left: 25px;
+    cursor: pointer;
+    background: linear-gradient(400deg, grey,black);
+}
+
+.user button:hover {
+    background: linear-gradient(100deg, black,grey);
+}
+
+.user input{
+    width: 40%;
+    font-size: 20px;
+    background: linear-gradient(400deg, black, grey);   
+    border-radius: 10px;
+    margin-top: -35px;
+    padding: 15px;
+    vertical-align: middle;
+    visibility: hidden;
+}
+
+#input-box, ::placeholder{
+    color: white;
+}
+
+.result-box {
+    margin-left: 50px;
+    width: 230px;
+    max-height: 200px;
+    overflow-y: auto;
+    background: linear-gradient(400deg, black, grey);
+    text-align: left;
+    line-height: 1.5;
+    border-radius: 15px;
+    display: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/*CART CONTENT*/
+.cartContent{
+    color: white;
+    font-size: 20px;
+    display: none;
+    background: linear-gradient(300deg, grey,black);
+    position: absolute;
+    right: 85px;
+    margin: 0;
+    text-align: left;
+    border: 2px solid;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.itemPrice, .cartGames, .total{
+    padding: 10px;
+}
+
+.total{
+    text-align: center;
+}
+
+.underline{
+    border-bottom: 2px solid;
+}
+
+.total button{
+    color: white;
+    font-size: 23px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*Jeevan's stuff*/
+.item .textitem{
+    opacity:0;
+    text-decoration: none;
+    transform:scale(0);
+    transition: 0.8s;
+    font-size: 20px;
+    
+}
+.item:hover .textitem{
+    box-shadow: 0 0 0 200px rgba(0,0,0,0.7) inset;
+}
+.item:hover .textitem{
+    opacity:1;
+    transform:scale(1);
+}
+
+.textitem{
+    position: absolute;
+    text-align: center;
+    color:white;
+    margin: 10%;
+    width: 300px;
+    height: 430px;
+}
+
+.textitem button{
+    font-size: 20px;
+}
+
+.Logo,.logoname,.profile,.cart{
+    position:absolute;
+    top:10px;
+    left:0px;
+}
+.Logo{
+    top:25px;
+    left:25px;
+}
+.profile{
+    left:unset;
+    border-radius: 80px;
+    overflow: hidden;
+    right:30px;
+    top:18px;
+}
+.logoname{
+    
+    right:unset;
+    color:white;
+    top:15px;
+    left:95px;
+    font-family: monospace;
+    font-size: 23px;
+    
+}
+
+
+
+.itemPrice, .cartGames, .total{
+    padding: 10px;
+}
+
+.total{
+    text-align: center;
+}
+
+.underline{
+    border-bottom: 2px solid;
+}
+
+.total button{
+    color: white;
+    font-size: 23px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#next6,#previous6,#allgames{
+    position:absolute;
+    top: 85%;
+    color:white;
+    background-color:transparent;
+    border:none;
+    font-size: xx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left:50px ;
+}
+
+#next6{
+    left:unset;
+    right:50px;
+}
+#allgames{
+    left:unset;
+    right:39;
+}
+
+
+
+.multiselect{
+    position: absolute;
+    width:200px;
+    top:10px;
+    right:0px;
+}
+.selectBox{
+    position:absolute;
+    width:176px;
+    left:unset;
+    top:110px;
+    
+}
+.selectBox select {
+    position:absolute;
+    width:100%;
+    background-color: lightblue;
+}
+.overSelect{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+
+#checkboxes{
+    position:absolute;
+    display:none;
+    border:1px white solid;
+    background-color:white;
+    width:174px;
+    top:130px;
+}
+#checkboxes label{  
+    display:block;
+    
+}
+#checkboxes label:hover{
+    background-color:white;
+}
+#optionList{
+    visibility:hidden;
+    display:none;
+}
+
+.breadcrumbs{
+    position:absolute;
+    padding:10px;
+    top:12%;
+    left:15px;
+    color: white;
+    font-size: 22px;
+}
+
+.breadcrumbs__link{
+    text-decoration: none;
+    color:white;
+
+}
+
+.breadcrumbs__link:hover{
+    text-decoration:underline;
+}
