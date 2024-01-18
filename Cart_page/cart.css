@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather';
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --img: 50px;
+    --infoPadding: 15px;
+    --contentPadding: 20px;
+    --windowSize: 90%;
+    width:100%;
+    height:100%;
+}
+
+
+body{
+    background: linear-gradient(400deg, black, #343434,black);
+    font-size: 20px;
+}
+
+.card{
+    width: 100%;
+    padding: 25px;
+    color: white;
+}
+
+/*CHANGE IMAGE TO WHITE*/
+.white{
+    filter: brightness(0) invert(1);   
+}
+
+/*INFO*/
+.info{  
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 0fr 1fr;
+    padding-bottom: var(--contentPadding);
+}
+
+img{
+    width: var(--img);
+}
+
+
+.logo{
+    display: flex;
+}
+
+.logo p{
+    margin-top: var(--infoPadding);
+    margin-left: var(--infoPadding);
+}
+
+.user{
+    text-align: right;
+    display: flex;
+    justify-content: right;
+}
+
+.user button{
+    margin-left: 25px;
+    cursor: pointer;
+    background: linear-gradient(400deg, grey,black);
+}
+
+.user button:hover {
+    background: linear-gradient(100deg, black,grey);
+}
+
+.user input{
+    height: 60px;
+    font-size: 20px;
+    background: linear-gradient(400deg, black, grey);   
+    border-radius: 10px;
+    padding: 10px;
+    vertical-align: middle;
+    visibility: hidden;
+}
+
+.gameSearch{
+    display: inline-flex;
+}
+
+.gameSearchResult{
+    position: relative;
+}
+
+.result-box {
+    max-height: 150px;
+    overflow-y: auto;
+    background: linear-gradient(400deg, black, grey);
+    padding: 10px;
+    text-align: left;
+    line-height: 1.5;
+    border-radius: 15px;
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+.result-box:hover{
+    cursor: pointer;
+}
+
+#input-box, ::placeholder{
+    color: white;
+}
+
+/*CART CONTENT*/
+.gameCart{
+    position: relative;
+}
+
+.cartContent{
+    display: none;
+    background: linear-gradient(300deg, grey,black);
+    right: 0px;
+    margin: 0;
+    text-align: left;
+    border: 2px solid;
+    max-height: 150px;
+    overflow-y: auto;
+    white-space: nowrap;
+    position: absolute;
+}
+
+.itemPrice, .cartGames, .total{
+    padding: 10px;
+}
+
+.total{
+    text-align: center;
+}
+
+.underline{
+    border-bottom: 2px solid;
+}
+
+.total button{
+    color: white;
+    font-size: 23px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*cart Container*/
+.container{
+    display:flex;
+    width:70%;
+    margin-bottom: 20px;
+}
+
+#root{
+    width:60%;
+    display:grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-gap:20px;
+}
+
+.cartBackground{
+    width:100%;
+    border-radius:5px;
+    background-color:white;
+    margin-left:20px;
+    padding:15px;
+    text-align: left;
+}
+
+.head{
+    background:linear-gradient(400deg, black, #343434);
+    border-radius:3px;
+    padding: 10px;
+    margin-bottom:20px;
+    color:white;
+    font-size: 30px;
+}
+
+.foot{
+    display: block;
+    text-align:right;
+}
+
+/*Script objects*/
+
+.cart-item{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-top:1px solid black ;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 3px;
+    margin: 10px 0px;
+}
+
+.row-img{
+    width:100px;
+    height:100px;
+    align-items:center;
+}
+
+.rowimg{
+    width: 200px;
+    height: 100%;
+}
+
+.fa-trash:hover{
+    cursor:pointer;
+    color:black;
+    font: bold;
+    font-family: sans-serif;
+    align-items:center;
+    justify-content: center;
+    display:flex;
+    justify-content: space-between ;
+}
+
+#checkout{
+    font-size: 30px;
+    padding: 5px;
+}
+
+#total{
+    padding-bottom: 20px;
+}

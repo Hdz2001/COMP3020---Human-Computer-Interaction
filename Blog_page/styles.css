@@ -1,0 +1,125 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: 'Merriweather';
+   box-sizing: border-box;
+}
+
+:root{
+   --img: 50px;
+   --infoPadding: 15px;
+   --contentPadding: 20px;
+   --windowSize: 90%;
+}
+
+body{
+   background: linear-gradient(400deg, black, #343434,black);
+   font-size: 20px;
+}
+
+
+
+.card{
+   width: 100%;
+   padding: 25px;
+   color: white;
+}
+
+/*CHANGE IMAGE TO WHITE*/
+.white{
+    filter: brightness(0) invert(1);   
+}
+
+/*INFO*/
+.info{  
+   display: grid;
+   align-items: start;
+   grid-template-columns: 1fr 0fr 1fr;
+   padding-bottom: var(--contentPadding);
+}
+
+img{
+   width: var(--img);
+}
+
+
+.logo{
+   display: flex;
+}
+
+.logo p{
+   margin-top: var(--infoPadding);
+   margin-left: var(--infoPadding);
+}
+
+.user{
+   position: relative;
+   text-align: right;
+}
+
+
+.user button{
+   margin-left: 25px;
+   cursor: pointer;
+   background: linear-gradient(400deg, grey,black);
+}
+
+.user button:hover {
+   background: linear-gradient(100deg, black,grey);
+}
+
+/*GENRE*/
+.genre{
+   display: flex;
+   padding-bottom: var(--contentPadding);
+}
+
+.genre p{
+   margin-top: var(--infoPadding);
+   margin-left: var(--infoPadding);
+}
+
+/*INTRODUCTION*/
+.introduction h1 {
+   font-size: 50px;
+   padding-bottom: 20px;
+}
+
+.introduction h2 {
+    padding-bottom: 20px;
+}
+
+.blogDetails{
+    display: flex;
+}
+
+.blogDetails img {
+   width: 900px;
+   height: 1000px;
+   padding-right: 20px;
+   animation: 1.5s ease-out 0s 1 slideInLeft;
+}
+
+.blogDetails p {
+   font-size: 20px;
+   line-height: 2;
+   animation: 1.5s ease-out 0s 1 slideInRight;
+}
+
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
